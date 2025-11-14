@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/docker/" />
+  <Folder Name="/src/">
+    <Project Path="QuizPodium/WebApi.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
