@@ -2,7 +2,7 @@
 using Domain.Enums;
 
 namespace Domain.Entities;
-public class Users : BaseEntity
+public class User : BaseEntity
 {
     public required string Username { get; set; }
     public required string Email { get; set; }
