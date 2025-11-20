@@ -8,6 +8,6 @@ public class Quiz : BaseEntity
     public Guid CreatedById {  get; set; } // Teacher
 
     public required User CreatedBy { get; set; }
-    public ICollection<Question> Questions { get; set; }
-    public ICollection<Game> Games { get; set; }
+    public ICollection<Question>? Questions { get; set; }
+    public ICollection<Game>? Games { get; set; }
 }
