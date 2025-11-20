@@ -1,6 +1,9 @@
 <Solution>
   <Folder Name="/docker/" />
   <Folder Name="/src/">
+    <Project Path="Application/Application.csproj" Id="f1deabd1-5980-4e4f-be56-2339b14ed2eb" />
+    <Project Path="Domain/Domain.csproj" Id="658a2d68-6da6-4ae5-842d-6ee1e01a4a11" />
+    <Project Path="Infrastructure/Infrastructure.csproj" Id="d2f9178d-2cf4-47f9-87fc-ef9f260dd19a" />
     <Project Path="QuizPodium/WebApi.csproj" />
   </Folder>
   <Folder Name="/tests/" />
