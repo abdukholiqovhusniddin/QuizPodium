@@ -15,14 +15,13 @@
     <Folder Include="Controllers\" />
     <Folder Include="Hubs\" />
     <Folder Include="BackgroundServices\" />
-    <Folder Include="Middlewares\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="13.1.0" />
     <PackageReference Include="MediatR.Extensions.Autofac.DependencyInjection" Version="13.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1">
       <PrivateAssets>all</PrivateAssets>
@@ -32,7 +31,9 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.1" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="10.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.0.1" />

@@ -14,6 +14,12 @@ public static class MiddlewareExtensions
         app.UseAuthentication();
         app.UseAuthorization();
 
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.UseRouting();
+
+
         return app;
     }
 }

@@ -1,15 +1,4 @@
-﻿using Application.DTOs.Contract.Requests;
-using Application.DTOs.Contract.Responses;
-using Application.DTOs.Employees.Requests;
-using Application.DTOs.Employees.Responses;
-using Application.DTOs.Equipments.Requests;
-using Application.DTOs.Equipments.Responses;
-using Application.DTOs.Salaries.Requests;
-using Application.DTOs.Salaries.Responses;
-using Application.DTOs.Users.Responses;
-using Application.DTOs.Vacations.Requests;
-using Application.DTOs.Vacations.Responses;
-using Mapster;
+﻿using Mapster;
 
 namespace Application.Mappers;
 

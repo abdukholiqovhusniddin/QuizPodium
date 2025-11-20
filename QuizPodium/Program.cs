@@ -25,14 +25,6 @@ else
         c.RoutePrefix = "api/docs";
     });
 }
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-
-app.UseAuthorization();
-
 app.UseAppMiddlewares();
 app.MapRazorPages();
 app.MapControllers();
