@@ -4,10 +4,19 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>7c6bb105-e878-4f4f-90b4-601cde58e00b</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Hubs\" />
+    <Folder Include="BackgroundServices\" />
+    <Folder Include="Middlewares\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 
 </Project>
