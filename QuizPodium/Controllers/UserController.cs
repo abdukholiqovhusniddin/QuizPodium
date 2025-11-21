@@ -1,12 +1,7 @@
-﻿using Application.Commons;
-using Application.DTOs.Users.Requests;
-using Application.DTOs.Users.Responses;
+﻿using Application.DTOs.Users.Requests;
 using Application.Features.Users.Commands;
-using Application.Features.Users.Queries;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using WebApi.Controllers;
 
 namespace WebApi.Controllers;
 
@@ -14,19 +9,16 @@ namespace WebApi.Controllers;
 [ApiController]
 public class UserController(IMediator mediator) : ApiControllerBase
 {
-    private readonly IMediator _mediator = mediator; // DI- Dependency Injection   
+    private readonly IMediator _mediator = mediator;
 
-    [HttpPost]
-    [Route("register")]
-    public async Task<IActionResult> CreateUser([FromForm] UserRegisterRequestDto userRegisterDto)
+    [HttpPost("register")]
+    public async Task<IActionResult> CreateUser([FromBody] UserRegisterRequestDto userRegisterDto)
     {
         var responseUserRegister = await _mediator.Send(new RegisterUserCommand(userRegisterDto));
         return StatusCode(responseUserRegister.StatusCode, responseUserRegister);
     }
 
-
-    [HttpPost]
-    [Route("login")]
+    [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] UserLoginRequestDto userLoginDto)
     {
         var token = await _mediator.Send(new LoginUserCommand(userLoginDto));
