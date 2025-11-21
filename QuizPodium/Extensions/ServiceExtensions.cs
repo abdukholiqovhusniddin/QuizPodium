@@ -5,6 +5,7 @@ using Application.Mappers;
 using Domain.Interfaces;
 using Infrastructure.Helpers;
 using Infrastructure.Persistence.DataContext;
+using Infrastructure.Repositories;
 using Infrastructure.Service;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
@@ -37,18 +38,11 @@ public static class ServiceExtensions
             .Validate(o => !string.IsNullOrWhiteSpace(o.Password), "SendEmail:Password must be provided (use User Secrets in dev)")
             .ValidateOnStart();
 
-        //// Repositories
-        //services.AddScoped<IUserRepository, UserRepository>();
-        //services.AddScoped<IEmployerRepository, EmployerRepository>();
-        //services.AddScoped<IEmployeesRepository, EmployeesRepository>();
-        //services.AddScoped<IContractsRepository, ContractsRepository>();
-        //services.AddScoped<ISalariesRepository, SalariesRepository>();
-        //services.AddScoped<IVacationRepository, VacationRepository>();
-        //services.AddScoped<IEquipmentRepository, EquipmentRepository>();
+        // Repositories
+        services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-        //// Services
-        //services.AddScoped<IFileService, FileService>();
+        // Services
         services.AddScoped<IEmailService, EmailService>();
         services.AddScoped<ICurrentUserService, CurrentUserService>();
         services.AddScoped<JwtService>();
