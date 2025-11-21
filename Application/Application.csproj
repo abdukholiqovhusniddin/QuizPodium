@@ -11,8 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
-    <Folder Include="Features\" />
+    <Folder Include="DTOs\Users\Responses\" />
+    <Folder Include="Features\Users\Queries\" />
+    <Folder Include="Features\Users\Validators\" />
   </ItemGroup>
 
   <ItemGroup>

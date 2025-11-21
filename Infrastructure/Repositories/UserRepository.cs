@@ -12,4 +12,8 @@ public class UserRepository(AppDbContext context) : IUserRepository
     public async Task<bool> ExistsAsync(string usernameOrEmail) =>
         await _context.Users.AnyAsync(u => (u.Username == usernameOrEmail
         || u.Email == usernameOrEmail) && u.IsActive);
+
+    public async Task<User?> GetByUsernameAsync(string username, CancellationToken cancellationToken) =>
+        await _context.Users.AsNoTracking()
+            .FirstOrDefaultAsync(u => u.Username == username && u.IsActive, cancellationToken);
 }
