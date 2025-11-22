@@ -2,17 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-public class Register : PageModel
+namespace WebApi.Pages.User;
+public class RegisterModel(IHttpClientFactory factory) : PageModel
 {
-    private readonly HttpClient _http;
-
-    public Register(IHttpClientFactory factory)
-    {
-        _http = factory.CreateClient("api");
-    }
+    private readonly HttpClient _http = factory.CreateClient("api");
 
     [BindProperty]
-    public UserRegisterRequestDto RegisterDto { get; set; }
+    public required UserRegisterRequestDto RegisterDto { get; set; }
 
     public string? Message { get; set; }
 
