@@ -8,6 +8,12 @@ builder.Services.AddRazorPages();
 builder.Services.AddAppServices(builder.Configuration);
 builder.Services.AddSwaggerDocumentation();
 
+builder.Services.AddHttpClient("api", c =>
+{
+    c.BaseAddress = new Uri("https://localhost:7191/");
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
